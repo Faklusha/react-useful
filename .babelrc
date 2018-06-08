@@ -1,0 +1,9 @@
+{
+  "presets": [
+    "flow"
+  ],
+  "plugins": [
+    "transform-decorators-legacy",
+    "dynamic-import-webpack"
+  ]
+}

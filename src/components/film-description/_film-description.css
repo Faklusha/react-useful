@@ -1,0 +1,32 @@
+.description__block {
+    background-color: currentColor;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.description__block_picture {
+    width: 200px;
+    height: 300px;
+}
+
+.description__block_info {
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+    height: 300px;
+    justify-content: space-around;
+    color: white;
+}
+
+.info__title {
+    font-size: 25px;
+    font-weight: 700;
+    color: #E91E63;
+}
+
+.info__timeline {
+    margin-left: 20px;
+}

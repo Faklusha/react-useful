@@ -1,0 +1,53 @@
+.film-list {
+    display: flex;
+    background-color: white;
+    height: 635px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15px;
+    overflow: auto;
+}
+
+.film-list__item {
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    height: 360px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.film-list__item_picture {
+    width: 100%;
+    height: 85%;
+    background-color: teal;
+}
+
+.film-list__item_info {
+    margin: 10px;
+    width: 100%;
+}
+
+.item__date {
+    display: inline-block;
+    padding: 0 5px;
+    float: right;
+    border: 1px solid black;
+    font-size: 10px;
+}
+
+.item__category {
+    font-size: 11px;
+    display: block;
+}
+img {
+    height: 100%;
+    width: auto;
+}
+
+.description__block_picture {
+  width: 200px;
+  height: 300px;
+}

@@ -1,0 +1,30 @@
+.header {
+    height: 40px;
+    background-color: #131306;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-title {
+    color: #E91E63;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px;
+}
+
+.search-button {
+    background-color: #E91E63;
+    padding: 5px 40px;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+}
+
+.search-button:hover {
+    background-color: white;
+    color: #E91E63;
+    cursor: pointer;
+}

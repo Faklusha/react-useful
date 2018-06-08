@@ -1,0 +1,26 @@
+.description {
+    padding: 10px 15px;
+    background-color: gray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.description-options {
+    display: flex;
+}
+
+.description-options__button {
+    margin: 0 10px;
+    color: white;
+}
+
+.description-options__button--active {
+    margin: 0 10px;
+    color: #E91E63;
+}
+
+.description-options__button:hover {
+    cursor: pointer;
+    color: #E91E63;
+    margin: 0 10px;
+}
