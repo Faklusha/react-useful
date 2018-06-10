@@ -1,42 +1,36 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+// @flow
+import React from 'react';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
-import Search from '../search/Search';
+import SearchContainer from '../search/SearchContainer';
 import Description from '../description/Description';
-import FilmList from '../film-list/FilmList';
+import FilmListContainer from '../film-list/FilmListContainer';
 import ErrorBoundary from '../error-boundary/ErrorBoundary';
-import { fetchFilms } from '../../modules/films';
-import styles from './_page.css';
+import styled from 'styled-components';
 
-@connect(({ state }) => ({
-  films: state.films,
-}), { dispatchFetchFilms: fetchFilms })
-export default class Page extends Component {
-  componentWillMount() {
-    const { match: { params: { search } }, location, dispatchFetchFilms } = this.props;
-    if (search || location.search) {
-      const searchString = location.search || search;
-      const splittedSearch = searchString.split('?');
-      const params = splittedSearch.length ? splittedSearch[1] : null;
-      if (params) {
-        dispatchFetchFilms(params);
-      }
-    }
-  }
+type Props = {films: Array<Object>};
 
-  render() {
-    const { films } = this.props;
+const StyledPage = styled.div`
+      width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    background-color: black;
+`;
+
+const Page = (props: Props) => {
+    const { films } = props;
     return (
-      <div className={styles.page}>
+      <StyledPage>
         <ErrorBoundary>
-          <Header />
-          <Search />
-          <Description isShownOptions count={films ? films.length : 0} />
-          <FilmList />
+          <Header isFilmSelected={false} />
+          <SearchContainer />
+          <Description isShownOptions count={films ? films.length || films.size : 0} />
+          <FilmListContainer />
           <Footer />
         </ErrorBoundary>
-      </div>
+      </StyledPage>
     );
   }
-}
+
+  export default Page;

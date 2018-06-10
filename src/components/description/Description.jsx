@@ -1,18 +1,29 @@
 // @flow
 
 import React from 'react';
-import DescriptionOptions from './DescriptionOptions';
-import styles from './_description.css';
+import DescriptionOptionsContainer from './DescriptionOptionsContainer';
+import styled from 'styled-components';
 
 type Props = {
     isShownOptions: boolean,
     count: number
 };
 
-const Description = ({ isShownOptions, count }: Props) => (
-  <div className={styles.description}>
-    <span className={styles.description__title}>{count} items found</span>
-    {isShownOptions && <DescriptionOptions />}
-  </div>
-);
+
+const Item = styled.div`
+ padding: 10px 15px;
+    background-color: gray;
+    display: flex;
+    justify-content: space-between;
+`;
+
+const Description = (props: Props) => {
+  const { isShownOptions, count } = props;
+  return (
+    <Item>
+      <span>{count} items found</span>
+      {isShownOptions && <DescriptionOptionsContainer />}
+    </Item>
+  );
+}
 export default Description;

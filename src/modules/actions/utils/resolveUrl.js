@@ -1,7 +1,9 @@
+// @flow
+
 import SEARCH_FIELDS from '../../../components/search/consts';
 import SORT_FIELDS from '../../../components/description/consts';
 
-const resolveUrl = (searchValue, searchField, sortField) => {
+const resolveUrl = (searchValue: string, searchField: string, sortField: string) => {
   let params = '100-asc';
   params += `-${sortField || SORT_FIELDS.release.name}`;
   if (searchValue) {

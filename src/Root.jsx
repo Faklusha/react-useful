@@ -5,8 +5,8 @@ import 'babel-polyfill';
 import { hot } from 'react-hot-loader';
 import { Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import Page from './components/pages/Page';
-import FilmPage from './components/pages/FilmPage';
+import Page from './components/pages/PageContainer';
+import FilmPage from './components/pages/FilmPageContainer';
 import NotFoundPage from './components/error-boundary/NotFoundPage';
 
 const Root = ({

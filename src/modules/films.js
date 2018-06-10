@@ -1,33 +1,37 @@
+
 import { call, put, all, takeLatest } from 'redux-saga/effects';
 import getUrlParams from './actions/utils/getUrlParams';
 import ACTION_TYPES from './actions/actions-types';
-
-export const fetchFilmById = id => ({
+import { List } from 'immutable';
+export const fetchFilmById = (id: string) => ({
   type: ACTION_TYPES.fetchFilmById,
   id,
 });
 
-export const fetchFilms = params => ({
+export const fetchFilms = (params: string) => ({
   type: ACTION_TYPES.fetchFilms,
   params,
 });
 
 
-export function saveFilms(films) {
+export function saveFilms(films: List) {
   return {
     type: ACTION_TYPES.saveFilms,
     films,
   };
 }
 
-export function selectFilm(film) {
+export function selectFilm(film: Object) {
   return {
     type: ACTION_TYPES.selectFilm,
     film,
   };
 }
-
-export function* fetchFilmsAsync({ params }) {
+type props = {
+  params: string,
+    next: Function,
+}
+export function* fetchFilmsAsync({ params }: props) {
   const url = getUrlParams('http://react-cdp-api.herokuapp.com/movies', params);
   const response = yield call(fetch, url, {
     method: 'GET',
@@ -73,7 +77,7 @@ export function resetSelectedFilm() {
   };
 }
 
-export function changeSearchValue(value) {
+export function changeSearchValue(value: string) {
   return {
     type: ACTION_TYPES.changeSearchValue,
     value,
@@ -81,14 +85,14 @@ export function changeSearchValue(value) {
 }
 
 
-export function changeSearchField(value) {
+export function changeSearchField(value: string) {
   return {
     type: ACTION_TYPES.changeSearchField,
     value,
   };
 }
 
-export function changeSortField(value) {
+export function changeSortField(value: string) {
   return {
     type: ACTION_TYPES.changeSortField,
     value,
