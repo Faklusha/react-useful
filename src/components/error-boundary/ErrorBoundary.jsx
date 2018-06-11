@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import styles from './_error-boundary.css';
 import styled from 'styled-components';
+import styles from './_error-boundary.css';
 
 export default class ErrorBoundary extends Component {
   state = {
@@ -47,10 +47,8 @@ export default class ErrorBoundary extends Component {
 
       return isErrorExisted ?
         (
-          <Error
-          >
-            <ErrorTitle
-            >
+          <Error>
+            <ErrorTitle>
               {title}
             </ErrorTitle>
             <ErrorLink //eslint-disable-line

@@ -1,8 +1,7 @@
+import { List } from 'immutable';
 import ACTION_TYPES from './actions/actions-types';
 import SEARCH_FIELDS from '../components/search/consts';
 import SORT_FIELDS from '../components/description/consts';
-import { List } from 'immutable';
-
 
 const initialState = {
   films: List(),

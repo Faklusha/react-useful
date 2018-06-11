@@ -8,9 +8,9 @@ import FilmList from './FilmList';
 export default class FilmListContainer extends Component {
   render() {
     return (
-    <FilmList
-      films={this.props.films}
-    />
+      <FilmList
+        films={this.props.films}
+      />
     );
   }
 }

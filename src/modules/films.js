@@ -1,8 +1,8 @@
-
+import { List } from 'immutable';
 import { call, put, all, takeLatest } from 'redux-saga/effects';
 import getUrlParams from './actions/utils/getUrlParams';
 import ACTION_TYPES from './actions/actions-types';
-import { List } from 'immutable';
+
 export const fetchFilmById = (id: string) => ({
   type: ACTION_TYPES.fetchFilmById,
   id,

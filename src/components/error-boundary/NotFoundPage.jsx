@@ -1,7 +1,7 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import styles from './_error-boundary.css';
-import styled from 'styled-components';
 
 const Error = styled.div`
   position: absolute;

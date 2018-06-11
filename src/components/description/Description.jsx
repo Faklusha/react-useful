@@ -1,8 +1,8 @@
 // @flow
 
 import React from 'react';
-import DescriptionOptionsContainer from './DescriptionOptionsContainer';
 import styled from 'styled-components';
+import DescriptionOptionsContainer from './DescriptionOptionsContainer';
 
 type Props = {
     isShownOptions: boolean,

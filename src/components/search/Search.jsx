@@ -1,11 +1,11 @@
 // @flow
 import React from 'react';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import SEARCH_FIELDS from './consts';
 import resolveUrl from '../../modules/actions/utils/resolveUrl';
 import maskUrl from '../../modules/actions/utils/maskUrl';
 import styles from './_search.css';
-import styled from 'styled-components';
 
 type Props = {
   dispatchChange: Function,

@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
-import FilmListItem from './FilmListItem';
 import styled from 'styled-components';
+import FilmListItem from './FilmListItem';
 
 type Props = {films: Array<Object>};
 
@@ -18,7 +18,7 @@ const List = styled.div`
 `;
 
 const FilmList = (props: Props) => {
-  const {films} = props;
+  const { films } = props;
   const renderFilms = () => {
     if (!films || films.length === 0) {
       return (<span>No films found</span>);
@@ -39,6 +39,6 @@ const FilmList = (props: Props) => {
       {renderFilms()}
     </List>
   );
-}
+};
 
 export default FilmList;

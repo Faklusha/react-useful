@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchFilms } from '../../modules/films';
- import Page from './Page';
+import Page from './Page';
 
 @connect(({ state }) => ({
   films: state.films,
@@ -22,7 +22,7 @@ export default class PageContainer extends Component {
 
   render() {
     return (
-      <Page films={this.props.films}/>
+      <Page films={this.props.films} />
     );
   }
 }

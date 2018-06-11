@@ -55,6 +55,6 @@ const Header = (props: Props) => {
       }
     </HeaderItem>
   );
-}
+};
 
 export default Header;

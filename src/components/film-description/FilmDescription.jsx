@@ -65,7 +65,7 @@ const FilmDescription = (props: Props) => {
   return (
     <Description>
       <Picture>
-        <Image src={posterPath} alt="poster"/>
+        <Image src={posterPath} alt="poster" />
       </Picture>
       <Info>
         <Title>{title}</Title>
@@ -78,6 +78,6 @@ const FilmDescription = (props: Props) => {
       </Info>
     </Description>
   );
-}
+};
 
 export default FilmDescription;

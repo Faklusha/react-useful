@@ -17,7 +17,7 @@ export default class FilmPageContainer extends Component {
 
 
   render() {
-  const { selectedFilm, dispatchResetSelectedFilm } = this.props;
+    const { selectedFilm, dispatchResetSelectedFilm } = this.props;
     return (<FilmPage selectedFilm={selectedFilm} resetSelectedFilm={dispatchResetSelectedFilm} />
     );
   }

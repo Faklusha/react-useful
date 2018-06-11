@@ -1,10 +1,10 @@
 // @flow
 import React from 'react';
+import styled from 'styled-components';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import FilmDescription from '../film-description/FilmDescription';
 import ErrorBoundary from '../error-boundary/ErrorBoundary';
-import styled from 'styled-components';
 
 type Props = {selectedFilm: Object, resetSelectedFilm: Function};
 const Page = styled.div`
@@ -18,14 +18,14 @@ const Page = styled.div`
 const FilmPage = (props: Props) => {
   const { selectedFilm, resetSelectedFilm } = props;
   return (
-  <Page>
-    <ErrorBoundary>
-      <Header isFilmSelected resetSelectedFilm={resetSelectedFilm} />
-      {selectedFilm && <FilmDescription selectedFilm={selectedFilm} />}
-      <Footer />
-    </ErrorBoundary>
-  </Page>
-)
+    <Page>
+      <ErrorBoundary>
+        <Header isFilmSelected resetSelectedFilm={resetSelectedFilm} />
+        {selectedFilm && <FilmDescription selectedFilm={selectedFilm} />}
+        <Footer />
+      </ErrorBoundary>
+    </Page>
+  );
 };
 
 export default FilmPage;

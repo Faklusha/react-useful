@@ -53,10 +53,10 @@ const Image = styled.img`
 const FilmListItem = (props: Props) => {
   const {
     title,
-      id,
-      date,
-      genre,
-      path,
+    id,
+    date,
+    genre,
+    path,
   } = props;
   return (
     <Link to={{ pathname: `/film/${id}` }}>
@@ -72,6 +72,6 @@ const FilmListItem = (props: Props) => {
       </ListItem>
     </Link>
   );
-}
+};
 
 export default FilmListItem;
